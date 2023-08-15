@@ -37,7 +37,7 @@ declare module 'leaflet' {
 
         namespace Action {
             function extendOptions<
-                TOptions extends ActionOptions & Record<string, unknown>,
+                TOptions extends ActionOptions & object,
                 TAction extends Action & { options: Partial<TOptions> },
             >(options?: TOptions | undefined): new (map: L.Map) => TAction;
         }
